@@ -9,6 +9,9 @@
 # production
 /build
 
+# compiled files
+background.js
+
 # misc
 .DS_Store
 .env.local
