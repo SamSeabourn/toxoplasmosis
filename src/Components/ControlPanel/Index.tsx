@@ -1,3 +1,4 @@
+/* global chrome */
 import React from 'react';
 import Button from '../Button/Index';
 import Logo from '../Logo/Index';
@@ -8,7 +9,13 @@ const controls : Array<ControlButton> = [
   {
     name: 'Cat pics only',
     description: 'Swap all images to cats',
-    buttonAction: () => { console.log('Cat pics only'); },
+    buttonAction: () => {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        const tabId = tabs[0].id ? tabs[0].id : 0;
+        console.log(tabId);
+        chrome.tabs.sendMessage(tabId, { greeting: 'hello' });
+      });
+    },
     uid: 'catpics001',
   },
   {
@@ -26,6 +33,7 @@ const controls : Array<ControlButton> = [
 ];
 
 export const ControlPanel = () => (
+
   <div className={styles.wrapper}>
     <Logo />
     {
