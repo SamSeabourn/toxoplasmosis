@@ -1,29 +1,33 @@
 import React, { useState } from 'react';
-import { ControlButton } from '../Types/ButtonFunction';
+import { ControlButton } from '../Types/ControlButton';
 import style from './Style.module.css';
 
 interface IProps {
-    controlButton: ControlButton
+  controlButton: ControlButton;
 }
 
 export const Button = ({ controlButton }: IProps) => {
   const { uid, name } = controlButton;
-  const [isActive, setIsActive] = useState<boolean>(true);
+  const [isPressed, setIsPressed] = useState<boolean>(false);
 
   const handleClick = () => {
-    setIsActive(!isActive);
+    if (isPressed) return;
+    setIsPressed(true);
     controlButton.buttonAction();
   };
 
-  const getActiveClass = () => (isActive ? style.on : style.off);
+  const getActiveClass = () => (isPressed ? style.pressed : style.notPressed);
 
   return (
-    <>
-      <button aria-label={name} id={uid} className={`${style.button} ${getActiveClass()}`} onClick={handleClick} type="button">
-        {name}
-      </button>
-    </>
-
+    <button
+      aria-label={name}
+      id={uid}
+      className={`${style.button} ${getActiveClass()}`}
+      onClick={handleClick}
+      type="button"
+    >
+      {name}
+    </button>
   );
 };
 

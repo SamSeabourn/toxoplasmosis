@@ -8,14 +8,14 @@
     transition: box-shadow 10s ease-in;
 }
 
-.on {
+.notPressed {
     transition: box-shadow 10s ease-in;
     font-size: 1.05em;
     box-shadow:  9px 9px 15px #cacaca,
              -9px -9px 15px #f6f6f6;
 }
 
-.off {
+.pressed {
     transition: box-shadow 10s ease-in;
     font-size: 1em;
     text-transform: scale(0.9);
