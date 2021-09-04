@@ -1,0 +1,16 @@
+{
+  "name": "toxoplasmosis",
+  "description": "Catify your browser with toxoplasmosis",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Toxoplasmosis"
+  },
+  "icons": {
+    "16": "logo.svg",
+    "48": "logo.svg",
+    "128": "logo.svg"
+  }
+}
