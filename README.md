@@ -1,46 +1,56 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Toxoplasmosis - A stupid plugin for people that like cats
 
-## Available Scripts
+### **About Toxoplasmosis**
 
-In the project directory, you can run:
+Toxoplasmosis is chrome extension that allows the users to change their browsing experience to be more cat focused leveraging the [Cats as a service](https://cataas.com/#/) API.
+Unfortunatley CATAAS severs were down while building this so I opted for using the [Place Cage](https://www.placecage.com/) API instead.
+I also wanted to try out some neumorphic buttons.
 
-### `yarn start`
+![](logo.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### **How to install?**
+Installation via executable
+- Download the zip file **toxoplasmosis_0.0.1.zip** and extract in a folder
+- Navigate to chrome and click the extensions icon then open manage extensions
+- On the top right toggle the switch onto developer mode
+- click **Load unpacked**, select the unzipped folder and click **select folder**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Installation via npm
+- Pull the repo
+- navigate to the folder containing package.json
+- Run **yarn install**
+- Run **yarn build**
+- Navigate to chrome and click the extensions icon then open manage extensions
+- On the top right toggle the switch onto developer mode
+- Click **Load unpacked**, select the unzipped folder and click **select folder**
 
-### `yarn test`
+### **How does it work?**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Open the extension and you will be presented with 3 toggles
+![](screen1.png)
+Change all images to cats (Currently using Nicholas Cage placeholder images)
+- Click **Cat pics only**
 
-### `yarn build`
+Get an Inspirational message and a cute cat (Currently using Nicholas Cage placeholder images)
+- Click **Inspirational message**
+- Click anywhere to close
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Change font to cat font, background to paws and all images to cats (Yes yes, currently using Nicholas Cage placeholder images here too)
+- Click **Full send**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **Build With**
+- React.js (Hooks, CSS Modules)
+- NPM, Yarn, CRA
+- Typescript
+- Vanilla JavaScript
+- Vanilla CSS
+- Google Chrome extension tools
+- Adobe Illustrator for graphics
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **Potentual Updates**
+- Use cat images once CATAAS is back online
+- Split content scripts into multiple files
+- Add resize listener to the window
+- Add toggles for each feature and save state
+- Add more features and controls

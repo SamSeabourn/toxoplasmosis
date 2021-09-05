@@ -46,16 +46,16 @@ const showInspirationalModal = () => {
   s.display = "grid";
   s.placeItems = "center";
   s.overflow = "hidden";
-  s.backgroundColor = "rgba(0,0,0,0.5)";
+  s.backgroundColor = "rgba(0,0,0,0.8)";
   modal.onclick = () => {
         modal.parentElement.removeChild(modal);
     }
   modal.innerHTML = `
             <div style="width:80vw;height: 80vh;background-color: white;border-radius: 10px;box-shadow: 0px 0px 24px 4px rgba(0,0,0,0.35);display:grid;overflow:hidden;">
-            <img src="${catUrl}/${window.innerWidth * 0.8 + randomBit()}/${window.innerHeight * 0.8 + randomBit()}" />
+            <img src="${ catUrl }/${ Math.round(window.innerWidth * 0.8) + randomBit() }/${ Math.round(window.innerHeight * 0.8) + randomBit() }" />
                 <div style="position: absolute;">
-                    <p style="font-style: italic; color: white; font-size: 2.5rem; text-shadow: #000 3px 3px 9px;margin:0px;">${inspirationalQuote}</p>
-                    <p style="font-family: san-serif;color: white; font-size: 2.5rem; text-shadow: #000 3px 3px 9px;margin:0px;">${catName}</p>
+                    <p style="font-style: italic; color: white; font-size: 2.5rem; text-shadow: #000 3px 3px 9px;margin:0px;">${ inspirationalQuote }</p>
+                    <p style="color: white; font-size: 2.5rem; text-shadow: #000 3px 3px 9px;margin:0px;">${ catName }</p>
                 </div>
             </div>
             `;
