@@ -27,7 +27,8 @@ Installation via npm
 
 ### **How does it work?**
 
-Open the extension and you will be presented with 3 toggles
+Open the extension and you will be presented with 3 toggles.
+Choose and option and wait for the browser to change. (This process can take a bit of time as the API's are a tad slow)
 ![](screen1.png)
 Change all images to cats (Currently using Nicholas Cage placeholder images)
 - Click **Cat pics only**
@@ -50,6 +51,7 @@ Change font to cat font, background to paws and all images to cats (Yes yes, cur
 
 ### **Potentual Updates**
 - Use cat images once CATAAS is back online
+- Add loaders, the API calls take some time to fetch
 - Split content scripts into multiple files
 - Add resize listener to the window
 - Add toggles for each feature and save state
